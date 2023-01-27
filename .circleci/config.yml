@@ -64,7 +64,7 @@ jobs:
 
   continuous-deployment:
     machine: true
-    resource_class: deveshpatil619/self-hosted-1
+    resource_class: deveshpatil619/self-hosted
     environment:
       REPOSITORY: finance-complaint
       GAR_IMAGE_NAME: finance-complaint
@@ -117,7 +117,7 @@ workflows:
           type: approval
           requires:
           - continuous-delivery
- ## "continuous-deployment" job runs after the "sanity-check" job is approved and the "continuous-integration" and "continuous-delivery" jobs are completed successfully.
+  ## "continuous-deployment" job runs after the "sanity-check" job is approved and the "continuous-integration" and "continuous-delivery" jobs are completed successfully.
       - continuous-deployment:
           requires:
             - sanity-check
