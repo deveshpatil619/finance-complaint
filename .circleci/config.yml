@@ -61,6 +61,12 @@ jobs:
           command: docker push $GOOGLE_COMPUTE_ZONE-docker.pkg.dev/${GOOGLE_PROJECT_ID}/$REPOSITORY/$IMAGE_NAME:$IMAGE_TAG 
 
 ## The "continuous-deployment" job starts by checking out the code from the repository and then runs several steps:
+# This CircleCI configuration is defining a workflow named continuous-deployment. This workflow has the following properties:
+# machine: The machine property is set to "true", which indicates that the workflow will run on a CircleCI-hosted machine.
+#resource_class: The resource_class property is set to "deveshpatil619/self-hosted", which is a custom resource class defined by the user "deveshpatil619".
+#environment: The environment property defines a list of environment variables that will be available to the workflow. 
+#These environment variables include the repository name, image name, image tag, AWS access key and secret access key, AWS default region, and the MongoDB URL.
+#steps: The steps property defines the list of steps that will be executed in the workflow. In this case, only one step is defined: checkout, which checks out the code from the repository."""
 
   continuous-deployment:
     machine: true
